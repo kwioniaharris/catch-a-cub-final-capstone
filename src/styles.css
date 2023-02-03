@@ -1,0 +1,131 @@
+html {
+  /*background: url('./assets/background.png') no-repeat center center fixed;*/
+  background: url("https://cdn.wallpapersafari.com/9/92/nk7FR3.jpg") no-repeat
+    center center fixed;
+  box-sizing: border-box;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  z-index: 0;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+h1 {
+  text-align: center;
+  font-size: 56px;
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
+  color: rgb(247, 243, 243);
+  margin-bottom: 0;
+  -webkit-text-stroke: 2px rgba(164, 138, 43, 0.566);
+}
+
+h2 {
+  text-align: center;
+  font-size: 25px;
+  color: rgb(16, 16, 15);
+  margin-top: 0;
+  -webkit-text-stroke: 1px rgb(168, 138, 43);
+}
+
+#start {
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
+  text-align: center;
+  border-color: rgb(226, 224, 219);
+  color: rgb(242, 236, 234);
+  -webkit-text-stroke: 1px rgb(190, 183, 183);
+  font-size: 28px;
+  background-color: rgb(164, 138, 43);
+  border-radius: 15%;
+  display: flex;
+  display: block;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+#timer {
+  color: rgb(251, 250, 244);
+}
+
+#score {
+  color: rgb(251, 250, 244);
+}
+
+.grid {
+  width: 90%;
+  height: 75%;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  cursor: url("../assets/net32.png"), pointer;
+  margin-bottom: 10px;
+  justify-content: fill;
+}
+
+.hole {
+  flex: 1 0 33.33%;
+  overflow: hidden;
+  position: relative;
+}
+
+.hole:after {
+  display: block;
+  /*background: url("./assets/hole.png") bottom center no-repeat;*/
+  background: url("https://github.com/Thinkful-Ed/js-dev-final-capstone-starter/blob/main/assets/hole.png?raw=true")
+    bottom center no-repeat;
+  background-size: contain;
+  content: "";
+  width: 90%;
+  height: 90%;
+  position: absolute;
+  bottom: -40%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.mole {
+  /*background:url('./assets/mole.png') bottom center no-repeat;*/
+  background: url("../assets/cubtree.png") bottom center no-repeat;
+  background-size: 50%;
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s;
+  transition: all 1s;
+  pointer-events: auto;
+}
+
+.hole.show .mole {
+  top: 0;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.item {
+  width: 150px;
+}
+
+.item1 {
+  width: 250px;
+}
+
+@media all and (max-width: 600px) {
+  h1 {
+    font-size: 40px;
+  }
+  h2 {
+    font-size: 30px;
+  }
+
+  .item1 {
+    width: 150px;
+  }
+}
